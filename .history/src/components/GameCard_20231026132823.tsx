@@ -14,7 +14,7 @@ const GameCard = ({game}: Props) => {
         <CardBody>
             <Heading fontSize='2xl'>{game.name}</Heading>
             <PlatformIconList platforms={game.parent_platforms.map(p => p.platform)}></PlatformIconList>
-            {/* p is an object {platform: Platform} with a property called platform of type Platform*/}
+            {/* p is an object  */}
         </CardBody>
     </Card>
   )

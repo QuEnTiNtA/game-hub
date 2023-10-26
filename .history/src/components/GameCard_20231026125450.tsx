@@ -13,8 +13,7 @@ const GameCard = ({game}: Props) => {
         <Image src={game.background_image}></Image>
         <CardBody>
             <Heading fontSize='2xl'>{game.name}</Heading>
-            <PlatformIconList platforms={game.parent_platforms.map(p => p.platform)}></PlatformIconList>
-            {/* p is an object {platform: Platform} with a property called platform of type Platform*/}
+            <PlatformIconList platforms={game.parent_plarforms.map(p => p.platform)}></PlatformIconList>
         </CardBody>
     </Card>
   )
