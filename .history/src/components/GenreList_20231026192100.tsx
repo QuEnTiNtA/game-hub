@@ -14,7 +14,7 @@ const GenreList = () => {
               borderRadius={8}
               src={getCroppedImageUrl(genre.image_background)}
             />
-            <Text fontSize='lg'>{genre.name}</Text>
+            <Text fontSize={}>{genre.name}</Text>
           </HStack>
         </ListItem>
       ))}
