@@ -25,7 +25,7 @@ function App() {
         </GridItem>
       </Show>
       <GridItem area="main">
-        <GameGrid selectedGenre={selectedGenre}></GameGrid>
+        <GameGrid selectedGenre={sele}></GameGrid>
       </GridItem>
     </Grid>
   );
