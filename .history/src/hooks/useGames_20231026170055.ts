@@ -33,20 +33,16 @@ const useGames = () => {
       setLoading(true);
       apiClient
         .get<FetchGamesResponse>("/games", {signal: controller.signal})
-        .then((res) => {
-            setGames(res.data.results);
-            setLoading(false);
-        })
+        .then((res) => {setGames(res.data.results))
         .catch((err) => {
             if (err instanceof CanceledError) return;
-            setError(err.message);
-            setLoading(false);
+            setError(err.message)
         });
 
       return () => controller.abort();
     }, []);
 
-    return {games, error, isLoading};
+    return {games, error};
 }
 
 export default useGames;
