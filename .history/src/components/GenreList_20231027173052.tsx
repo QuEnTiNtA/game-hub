@@ -7,7 +7,6 @@ import {
   Spinner,
   Button,
   Heading,
-  Box,
 } from "@chakra-ui/react";
 import useGenres, { Genre } from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/image-url";
@@ -25,7 +24,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
 
   return (
     <>
-      <Box  paddingX={4}>
+      <HStack>
           <Heading fontSize='2xl' marginBottom={3}>Genres</Heading>
           <List>
             {data.map((genre) => (
@@ -51,7 +50,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
               </ListItem>
             ))}
           </List>
-      </Box>
+      </HStack>
     </>
   );
 };
