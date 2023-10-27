@@ -13,7 +13,7 @@ const SearchInput = ({onSearch}: Props) => {
     <form onSubmit={(event) => {
         event.preventDefault();
         // prevent the form from being posted to the server.
-        if (ref.current)  onSearch(ref.current.value);
+        if (ref.current)  console.log(ref.current.value);
     }}>
         <InputGroup>
             <InputLeftElement children={<BsSearch />}></InputLeftElement>

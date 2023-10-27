@@ -6,14 +6,14 @@ interface Props {
     onSearch: (searchText: string) => void;
 }
 
-const SearchInput = ({onSearch}: Props) => {
+const SearchInput = ({onSearch}) => {
   const ref = useRef<HTMLInputElement>(null);
 
   return (
     <form onSubmit={(event) => {
         event.preventDefault();
         // prevent the form from being posted to the server.
-        if (ref.current)  onSearch(ref.current.value);
+        if (ref.current)  console.log(ref.current.value);
     }}>
         <InputGroup>
             <InputLeftElement children={<BsSearch />}></InputLeftElement>

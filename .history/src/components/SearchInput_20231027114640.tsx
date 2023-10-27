@@ -3,17 +3,17 @@ import { useRef } from 'react';
 import { BsSearch } from 'react-icons/bs';
 
 interface Props {
-    onSearch: (searchText: string) => void;
+    onSearch: (searchText)
 }
 
-const SearchInput = ({onSearch}: Props) => {
+const SearchInput = () => {
   const ref = useRef<HTMLInputElement>(null);
 
   return (
     <form onSubmit={(event) => {
         event.preventDefault();
         // prevent the form from being posted to the server.
-        if (ref.current)  onSearch(ref.current.value);
+        if (ref.current)  console.log(ref.current.value);
     }}>
         <InputGroup>
             <InputLeftElement children={<BsSearch />}></InputLeftElement>
