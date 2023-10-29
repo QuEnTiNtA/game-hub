@@ -1,4 +1,4 @@
-import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { GameQuery } from "../App";
 import APIClient, { FetchResponse } from "../services/api-client";
 import { Platform } from "./usePlatforms";
@@ -28,10 +28,7 @@ const useGames = (gameQuery: GameQuery) =>
                 search: gameQuery.searchText,
                 page: pageParam
             },
-        }),
-    getNextPageParam: (lastPage, allPages) => {
-        return lastPage.next ? allPages.length + 1 : undefined;
-    }
+        })
   });
 
 export default useGames;

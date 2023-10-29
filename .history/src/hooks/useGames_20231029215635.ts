@@ -28,10 +28,7 @@ const useGames = (gameQuery: GameQuery) =>
                 search: gameQuery.searchText,
                 page: pageParam
             },
-        }),
-    getNextPageParam: (lastPage, allPages) => {
-        return lastPage.next ? allPages.length + 1 : undefined;
-    }
+        })
   });
 
 export default useGames;

@@ -18,9 +18,9 @@ const GameGrid = ({ gameQuery }: Props) => {
     data,
     error,
     isLoading,
-    isFetchingNextPage,
-    fetchNextPage,
-    hasNextPage,
+    // isFetchingNextPage,
+    // fetchNextPage,
+    // hasNextPage,
   } = useGames(gameQuery);
   const skeletons = [1, 2, 3, 4, 5, 6];
 
