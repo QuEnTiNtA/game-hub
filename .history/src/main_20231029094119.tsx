@@ -7,16 +7,13 @@ import App from "./App";
 import theme from "./theme";
 import "./index.css";
 
-const queryClient = new QueryClient();
+
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      <QueryClientProvider client={queryClient}>
-        <App />
-        <ReactQueryDevtools />
-      </QueryClientProvider>
+      <App />
     </ChakraProvider>
   </React.StrictMode>
 );
