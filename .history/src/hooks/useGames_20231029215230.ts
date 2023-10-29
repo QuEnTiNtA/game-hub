@@ -21,13 +21,11 @@ const useGames = (gameQuery: GameQuery) =>
     queryFn: () =>
       apiClient
         .getAll({
-            params: {
-                genres: gameQuery.genre?.id,
-                parent_platforms: gameQuery.platform?.id,
-                ordering: gameQuery.sortOrder,
-                search: gameQuery.searchText
-            },
+
+        })<FetchResponse<Game>>('/games', {
+            
         })
-  });
+        .then(res => res.data)
+  })
 
 export default useGames;

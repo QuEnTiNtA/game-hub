@@ -28,6 +28,8 @@ const useGames = (gameQuery: GameQuery) =>
                 search: gameQuery.searchText
             },
         })
-  });
+        })
+        .then(res => res.data)
+  })
 
 export default useGames;

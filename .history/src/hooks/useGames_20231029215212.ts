@@ -20,7 +20,7 @@ const useGames = (gameQuery: GameQuery) =>
     queryKey: ['games', gameQuery],
     queryFn: () =>
       apiClient
-        .getAll({
+        .getA<FetchResponse<Game>>('/games', {
             params: {
                 genres: gameQuery.genre?.id,
                 parent_platforms: gameQuery.platform?.id,
@@ -28,6 +28,7 @@ const useGames = (gameQuery: GameQuery) =>
                 search: gameQuery.searchText
             },
         })
-  });
+        .then(res => res.data)
+  })
 
 export default useGames;

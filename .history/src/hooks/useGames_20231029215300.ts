@@ -28,6 +28,6 @@ const useGames = (gameQuery: GameQuery) =>
                 search: gameQuery.searchText
             },
         })
-  });
+        });
 
 export default useGames;

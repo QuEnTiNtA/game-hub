@@ -27,7 +27,10 @@ const useGames = (gameQuery: GameQuery) =>
                 ordering: gameQuery.sortOrder,
                 search: gameQuery.searchText
             },
+        })<FetchResponse<Game>>('/games', {
+            
         })
-  });
+        .then(res => res.data)
+  })
 
 export default useGames;
