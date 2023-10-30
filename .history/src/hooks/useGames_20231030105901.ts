@@ -23,7 +23,7 @@ const useGames = (gameQuery: GameQuery) =>
         .getAll({
             params: {
                 genres: gameQuery.genreId,
-                parent_platforms: gameQuery.platformId,
+                parent_platforms: gameQuery.platform?.id,
                 ordering: gameQuery.sortOrder,
                 search: gameQuery.searchText,
                 page: pageParam

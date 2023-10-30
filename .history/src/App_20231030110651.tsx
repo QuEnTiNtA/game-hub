@@ -14,7 +14,7 @@ import GameHeading from "./components/GameHeading";
 
 export interface GameQuery {
   genreId?: number; //undefined
-  platformId?: number;
+  platformId?: Platform | null;
   sortOrder: string;
   searchText: string;
 }
@@ -54,7 +54,7 @@ function App() {
             <PlatformSelector
               selectedPlatformId={gameQuery.platformId}
               onSelectPlatform={(platform) =>
-                setGameQuery({ ...gameQuery, platformId: platform.id, })
+                setGameQuery({ ...gameQuery, platformId: platform })
               }
             />
             <SortSelector
